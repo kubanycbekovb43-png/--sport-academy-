@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>РШОР | Спортивная Академия (Макет проекта)</title>
+    
+    <!-- SEO-настройки для поиска в Google -->
+    <meta name="description" content="Профессиональный макет сайта спортивной академии РШОР. Обучение, лагеря и тренировки для молодых атлетов.">
+    <meta name="keywords" content="РШОР, спортивная академия, макет сайта, тренировки для детей, спортивная школа">
+    
+    <style>
+        :root {
+            --bg-color: #0b0c10;
+            --text-color: #ffffff;
+            --accent-card: #1f2833;
+            --bright-accent: #66fcf1; /* Яркий спортивный неон */
+            --gray-text: #afb1b6;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background: rgba(11, 12, 16, 0.95);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .project-title {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--gray-text);
+        }
+
+        /* Главный экран по вашему чертежу */
+        .hero {
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            background: linear-gradient(rgba(11, 12, 16, 0.8), rgba(11, 12, 16, 0.95)), url('https://unsplash.com') no-repeat center center/cover;
+        }
+
+        .hero h2 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--gray-text);
+            margin-bottom: 10px;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: var(--bright-accent);
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 18px 40px;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 1px;
+            border-radius: 4px;
+            background-color: transparent;
+            border: 2px solid var(--bright-accent);
+            color: var(--bright-accent);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--bright-accent);
+            color: #000;
+            box-shadow: 0 0 20px var(--bright-accent);
+        }
+
+        /* Секция блоков из макета */
+        .container {
+            padding: 60px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--bright-accent);
+            margin: 10px auto 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--accent-card);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--bright-accent);
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--bright-accent);
+        }
+
+        .card p {
+            color: var(--gray-text);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .btn { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="project-title">Макет Спортивной Академии</div>
+    </header>
+
+    <!-- Главный экран по блокноту -->
+    <section class="hero">
+        <h2>Спортивный проект</h2>
+        <h1>РШОР</h1>
+        <a href="#programs" class="btn">Первая сессия</a>
+    </section>
+
+    <!-- Раздел программ и видов спорта -->
+    <section class="container" id="programs">
+        <h2 class="section-title">Спортивные Направления</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Футбол</h3>
+                <p>Развитие тактического мышления, техники владения мячом и командного взаимодействия по современным стандартам.</p>
+            </div>
+            <div class="card">
+                <h3>Баскетбол</h3>
+                <p>Интенсивные тренировки, улучшение прыгучести, дриблинга и точности бросков под руководством опытных тренеров.</p>
+            </div>
+            <div class="card">
+                <h3>Теннис</h3>
+                <p>Индивидуальная постановка ударов, развитие выносливости, координации и игровой стратегии на кортах академии.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Раздел для родителей -->
+    <section class="container" style="background-color: rgba(255,255,255,0.02); border-radius: 8px;">
+        <h2 class="section-title">Информация для родителей</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Безопасность</h3>
+                <p>Закрытая тренировочная территория, постоянное медицинское сопровождение и квалифицированный персонал.</p>
+            </div>
+            <div class="card">
+                <h3>Расписание и Лагеря</h3>
+                <p>Гибкий график регулярных занятий, а также сезонные интенсивные сборы во время школьных каникул.</p>
+            </div>
+            <div class="card">
+                <h3>Развитие атлета</h3>
+                <p>Регулярные отчеты о прогрессе ребенка, фитнес-тестирования и индивидуальные рекомендации по питанию.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
